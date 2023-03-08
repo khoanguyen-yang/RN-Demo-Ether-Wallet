@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { StyleSheet, Text, TextProps } from 'react-native';
+
 import { useColors } from '../hooks/useColors';
 
 interface MTextProps extends TextProps {

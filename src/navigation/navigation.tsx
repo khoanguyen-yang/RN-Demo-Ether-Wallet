@@ -2,11 +2,11 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import ImportSeed from '../screens/ImportSeed';
-import Home from '../screens/Home';
-
 import { useAppSelector } from '../hooks/redux';
 import { selectIsHavingExistingAddress } from '../selectors/addressSelectors';
+
+import ImportSeed from '../screens/ImportSeed';
+import Home from '../screens/Home';
 import ManageAccount from '../screens/ManageAccount';
 
 const Stack = createNativeStackNavigator();

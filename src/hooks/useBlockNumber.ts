@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+
 import { chainProviderController } from '../controllers/ChainProviderController';
 
 // Use latest block number of a specific chain

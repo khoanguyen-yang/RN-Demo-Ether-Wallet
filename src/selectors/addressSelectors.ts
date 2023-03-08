@@ -11,10 +11,8 @@ export const selectCurrentActiveAddress = createSelector(
   currentActiveAddress,
   data => data,
 );
-
 export const selectIsHavingExistingAddress = createSelector(
   isHavingExistingAddress,
   data => data,
 );
-
 export const selectAddresses = createSelector(addresses, data => data);

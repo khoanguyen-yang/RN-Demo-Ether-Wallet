@@ -1,4 +1,5 @@
 import { ethers } from 'ethers';
+
 import { ChainId } from '../constants/ChainId';
 
 let chainProviderController: ChainProviderController;

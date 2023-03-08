@@ -1,13 +1,11 @@
 import React from 'react';
-
 import { StyleSheet, TextInput, TextInputProps, View } from 'react-native';
+
 import { useColors } from '../hooks/useColors';
 
-interface ITextInputProps extends TextInputProps {
-  label?: string;
-}
+interface MTextInputProps extends TextInputProps {}
 
-const ITextInput = (props: ITextInputProps) => {
+const MTextInput = (props: MTextInputProps) => {
   const colors = useColors();
 
   return (
@@ -24,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(ITextInput);
+export default React.memo(MTextInput);

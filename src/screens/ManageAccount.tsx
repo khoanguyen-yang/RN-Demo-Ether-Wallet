@@ -1,11 +1,13 @@
 import React, { useCallback } from 'react';
-import { NavigationProp } from '@react-navigation/native';
 import { FlatList, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
+
 import MText from '../components/MText';
 import ScreenContainer from '../components/ScreenContainer';
-import { keypairController } from '../controllers/AccountController';
+import MButton from '../components/MButton';
 
+import { keypairController } from '../controllers/KeypairController';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import { useColors } from '../hooks/useColors';
 import {
@@ -13,7 +15,7 @@ import {
   selectCurrentActiveAddress,
 } from '../selectors/addressSelectors';
 import { setCurrentActiveAddress } from '../stores/address';
-import MButton from '../components/MButton';
+
 import { Screen } from '../navigation/navigation';
 
 const ManageAccount = ({

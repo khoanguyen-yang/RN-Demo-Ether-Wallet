@@ -2,18 +2,18 @@ import React, { useCallback, useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import Clipboard from '@react-native-clipboard/clipboard';
 import Icon from 'react-native-vector-icons/AntDesign';
+import { NavigationProp } from '@react-navigation/native';
 
 import ScreenContainer from '../components/ScreenContainer';
 import MText from '../components/MText';
+import MButton from '../components/MButton';
 
 import { useAppSelector } from '../hooks/redux';
 import useNativeBalance from '../hooks/useNativeBalance';
 import { selectCurrentActiveAddress } from '../selectors/addressSelectors';
+import { useColors } from '../hooks/useColors';
 
 import { ChainId } from '../constants/ChainId';
-import { useColors } from '../hooks/useColors';
-import MButton from '../components/MButton';
-import { NavigationProp } from '@react-navigation/native';
 import { Screen } from '../navigation/navigation';
 
 const Home = ({ navigation }: { navigation: NavigationProp<any, any> }) => {

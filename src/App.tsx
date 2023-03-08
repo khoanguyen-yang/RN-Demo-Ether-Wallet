@@ -5,14 +5,14 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import MainNavigation from './navigation/navigation';
 
-import AccountController from './controllers/AccountController';
+import KeypairController from './controllers/KeypairController';
 import ChainProviderController from './controllers/ChainProviderController';
 
 import { persistor, store } from './stores/index';
 
 const App = () => {
   useEffect(() => {
-    AccountController.init();
+    KeypairController.init();
     ChainProviderController.init();
   }, []);
 

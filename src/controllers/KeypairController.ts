@@ -1,5 +1,5 @@
 /**
- * KeypairController controls every account (keypairs) in the application
+ * KeypairController controls every keypairs in the application
  *  It can be used to interact with the keypair such as sending transactions
  */
 
@@ -10,7 +10,8 @@ let keypairController: KeypairController;
 
 class KeypairController {
   currentActiveAddress: string = '';
-  keypair: { [key: string]: string } = {};
+
+  private keypair: { [key: string]: string } = {};
 
   async loadKeypair(address: string) {
     /**

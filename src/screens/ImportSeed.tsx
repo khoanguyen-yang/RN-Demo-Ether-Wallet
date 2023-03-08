@@ -15,9 +15,11 @@ import {
   storePrivateKeyToKeychain,
 } from '../utils/crypto';
 
-import { Screen } from '../navigation/navigation';
-import { keypairController } from '../controllers/AccountController';
+import { keypairController } from '../controllers/KeypairController';
 import { selectIsHavingExistingAddress } from '../selectors/addressSelectors';
+
+import { Screen } from '../navigation/navigation';
+import { DeviceInfo } from '../constants/device';
 
 const ImportSeed = ({
   navigation,
@@ -42,14 +44,14 @@ const ImportSeed = ({
 
   const onPasteSeed = useCallback(async () => {
     const clipboardData = await Clipboard.getString();
-    setSeedPhrase(clipboardData);
+    setSeedPhrase(clipboardData.trim());
   }, []);
 
   const onImport = useCallback(async () => {
     setIsImporting(true);
 
     setTimeout(async () => {
-      const wallet = await createEtherWalletFromSeed(seedPhrase);
+      const wallet = await createEtherWalletFromSeed(seedPhrase.trim());
 
       if (wallet) {
         // store private key to keychain
@@ -146,7 +148,7 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 10,
     paddingHorizontal: 12,
-    minHeight: 200,
+    minHeight: 0.2 * DeviceInfo.height,
     fontSize: 18,
   },
   utilButtons: {
